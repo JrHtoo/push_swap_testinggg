@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:36:19 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/01/16 12:08:44 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/02/05 15:11:07 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,9 @@ void	reverse_rotate_r(t_list **stack_a, t_list **stack_b)
 	reverse_rotate(stack_a);
 	reverse_rotate(stack_b);
 	ft_printf("rra\n");
+}
+
+void	reverse_rotate_silent(t_list **stack)
+{
+	reverse_rotate(stack);
 }

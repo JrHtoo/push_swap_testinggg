@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:35:57 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/01/16 12:07:47 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/02/05 15:11:54 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,9 @@ void	rotate_r(t_list **stack_a, t_list **stack_b)
 	rotate(stack_a);
 	rotate(stack_b);
 	ft_printf("rr\n");
+}
+
+void	rotate_silent(t_list **stack)
+{
+	rotate(stack);
 }

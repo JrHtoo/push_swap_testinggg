@@ -6,18 +6,20 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 12:54:24 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/01/28 15:56:56 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/02/05 10:41:06 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	check_sorted(t_list **stack)
+int	check_sorted(t_list **stack, int size)
 {
+	int		i;
 	t_list	*temp;
 
+	i = 0;
 	temp = *stack;
-	while (temp->next)
+	while (temp->next && i++ < size - 1)
 	{
 		if (temp->content > temp->next->content)
 			return (0);

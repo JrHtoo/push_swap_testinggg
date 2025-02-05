@@ -11,7 +11,8 @@ SRCS = main.c \
 		utils_another_one.c \
 		partition.c \
 		quick_sort.c \
-		double_check.c
+		double_check.c \
+		tiny_sort.c
 
 SRCS_PREFIXED = $(addprefix $(SRC_PATH), $(SRCS))
 

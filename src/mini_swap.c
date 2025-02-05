@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 13:21:40 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/02/03 13:02:03 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/02/05 10:43:39 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	sort_3(t_list **stack_a)
 	else if (find_max(stack_a) == (*stack_a)->content)
 	{
 		rotate_a(stack_a);
-		if (!check_sorted(stack_a))
+		if (!check_sorted(stack_a, ft_lstsize(*stack_a)))
 			swap_a(stack_a);
 	}
 	else if (ft_lstlast(*stack_a)->content == find_min(stack_a))
@@ -52,7 +52,7 @@ static void	sort_4(t_list **stack_a, t_list **stack_b)
 	else if (distance == 3)
 		reverse_rotate_a(stack_a);
 	push_b(stack_a, stack_b);
-	if (!check_sorted(stack_a))
+	if (!check_sorted(stack_a, ft_lstsize(*stack_a)))
 		sort_3(stack_a);
 	push_a(stack_a, stack_b);
 }
